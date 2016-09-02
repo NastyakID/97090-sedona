@@ -65,11 +65,13 @@ body {
 
 /*main navigation*/
 
-.main-header {
+.main-header,
+.main-header-inner {
 	font-size: 0;
 }
 
-.for-navigation {
+.for-navigation,
+.for-navigation-inner {
 	width: 100%;
 	margin: 0 auto;
 	font-size: 0;
@@ -82,20 +84,23 @@ body {
 	z-index: 10;
 }
 
-.main-navigation {
+.main-navigation,
+.main-navigation-inner {
 	width: 100%;
 	height: 60px;
 	font-size: 0;
 	box-sizing: border-box;
 }
 
-.main-navigation ul {
+.main-navigation ul,
+.main-navigation-inner ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
-.main-navigation li {
+.main-navigation li,
+.main-navigation-inner li {
 	width: 20%;
 	display: inline-block;
 	vertical-align: top;
@@ -106,7 +111,8 @@ body {
 	text-transform: uppercase;
 }
 
-.main-navigation li:nth-child(3) {
+.main-navigation li:nth-child(3),
+.main-navigation-inner li:nth-child(3) {
     width: 137px;
 	height: 70px;
 	display: inline-block;
@@ -116,23 +122,28 @@ body {
 	background-size: cover;
 }
 
-.main-navigation li a {
+.main-navigation li a,
+.main-navigation-inner li a {
 	padding-top: 10%;
 }
 
-.main-navigation a:active {
+.main-navigation a:active,
+.main-navigation-inner a:active {
 	color: #766357;
 }
 
-.main-navigation a:visited {
+.main-navigation a:visited,
+.main-navigation-inner a:visited {
 	color: #c7c7c7;
 }
 
-.main-navigation a:hover {
+.main-navigation a:hover,
+.main-navigation-inner a:hover {
 	color: #81b3d2;
 }
 
-.main-navigation a {
+.main-navigation a,
+.main-navigation-inner a {
 	text-decoration: none;
 	color: #000;	
 	display: block;
@@ -674,6 +685,8 @@ main {
 	font-size: 21px;
 	color: #dcdcdc;
 	cursor: pointer;
+	white-space: nowrap;
+
 }
 
 .login-form label + i.icon-minus {
@@ -700,7 +713,21 @@ main {
 	width: 40px;
 	height: 40px;
 	position: absolute;
-	right: 450px;
+	right: -10px;
+	top: 0;
+}
+
+.popup-form-close a {
+	color: #766357;
+	font-size: 12px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.popup-form-close a:hover {
+	color: #81b3d2;
+	font-size: 14px;
+	font-weight: bold;
 }
 
 .login-form-show {
@@ -717,7 +744,7 @@ main {
     top: 0;
     bottom: 0;
     right: 0;
-	background: #d6e9f6
+	background: #3c6384
 		url("../img/sedona-background.png") no-repeat center;
 	background-size: cover;
 	-webkit-filter: blur(8px);
@@ -730,6 +757,8 @@ main {
 .form-pic {
 	height: 215px;
 	padding: 25px 25px;
+	padding-bottom: 0;
+	margin-bottom: -20px;
 	z-index: 100;
 	position: relative;
 	font-size: 0;
@@ -928,7 +957,6 @@ right: -50px;
 
 .sort {
 	margin-left: 40px;
-	margin-top: -40px;
 }
 
 .sort .sort-all-block {
@@ -968,11 +996,12 @@ right: -50px;
 	vertical-align: top;
 }
 
+
 .sort .sort-all-block li {
 	list-style: none;
 	display: inline-block;
 	vertical-align: top;
-padding-bottom: 35px;
+	padding-bottom: 35px;
 	padding-left: 35px;
 	text-transform: uppercase;
 	font-family: "PT Sans", "Arial", sans-serif, "symbols-sedona";
@@ -982,9 +1011,6 @@ padding-bottom: 35px;
 .sort-all-block li a {
 	text-decoration:  none;
 	color: #000;
-		font-size:  10px;
-	line-height: 18px;
-	font-family: "PT Sans", "Arial", sans-serif, "symbols-sedona";
 }
 
 .sort-all-block li a:visited {
@@ -997,6 +1023,8 @@ padding-bottom: 35px;
 	color: #81b3d2;
 	text-decoration: underline;
 }
+
+
 
 .sort .sort-all-block span {
 	display: inline-block;
@@ -1078,6 +1106,11 @@ padding-bottom: 35px;
 	background-color: #669ec0;
 }
 
+.result-content a:visited {
+	color: #7aadcb;
+	background-color: #5496bd;
+}
+
 .result-content button {
 	width: 140px;
 	height: 25px;
@@ -1095,6 +1128,11 @@ padding-bottom: 35px;
 
 .result-content button:hover {
 	background-color: #604e43;
+}
+
+.result-content button:visited {
+	background-color: #503e33;
+	color: #857871;
 }
 
 .raiting span {
@@ -1394,9 +1432,6 @@ button {
 	width: 300px;
 }
 
-.search-form {
-	display: none;
-}
 
 }
 
@@ -1631,17 +1666,4 @@ display: none;
 	width: 350px;
 }
 
-.bg-picture-hotels {
-	display:none;
-}
-
-.form-pic {
-	display: none;
-}
-
-.sort {
-	margin-top: 20px;
-}
-
- 
 }
